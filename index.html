@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdasimboIphones - Premium iPhones in Kenya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        accent: '#8A2BE2',
+                        secondary: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #8A2BE2 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+        }
+        .nav-link:hover {
+            color: #8A2BE2;
+        }
+        .btn-accent:hover {
+            background-color: #6a1cb0;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #8A2BE2;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body class="bg-primary text-white font-sans">
+    <!-- Header -->
+    <header class="bg-primary border-b border-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fab fa-apple text-3xl text-accent"></i>
+                <h1 class="text-2xl font-bold">Adasimbo<span class="text-accent">Iphones</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link font-medium hover:text-accent transition">Home</a>
+                <a href="#products" class="nav-link font-medium hover:text-accent transition">Products</a>
+                <a href="#deals" class="nav-link font-medium hover:text-accent transition">Deals</a>
+                <a href="#about" class="nav-link font-medium hover:text-accent transition">About</a>
+                <a href="#contact" class="nav-link font-medium hover:text-accent transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <i class="fas fa-shopping-cart text-xl cursor-pointer"></i>
+                    <span class="cart-badge">0</span>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">iPhone 16 Pro Max</h2>
+                <p class="text-xl mb-6">The ultimate iPhone experience. Now available in Kenya.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-accent px-6 py-3 rounded-full font-medium btn-accent transition hover:bg-purple-700">
+                        Shop Now
+                    </button>
+                    <button class="border border-accent text-accent px-6 py-3 rounded-full font-medium hover:bg-purple-900 hover:bg-opacity-20 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/hero/iphone_15_pro__eqwrkztedj2m_large.jpg" 
+                     alt="iPhone 16 Pro Max" 
+                     class="w-full max-w-md transform rotate-6 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Our iPhone Collection</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- iPhone 12 -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden product-card transition duration-300">
+                    <div class="p-4">
+                        <img src="https://www.apple.com/v/iphone/home/bk/images/overview/compare/iphone_12__bprv1wodgwiq_large.png" 
+                             alt="iPhone 12" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">iPhone 12</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">(128 reviews)</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">64GB Storage | 6.1" Super Retina XDR</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSh 89,999</span>
+                            <button class="bg-accent text-white px-4 py-2 rounded-full btn-accent transition">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- iPhone 13 Pro -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden product-card transition duration-300">
+                    <div class="p-4">
+                        <img src="https://www.apple.com/v/iphone/home/bk/images/overview/compare/iphone_13_pro__bqz4gis4rv9m_large.png" 
+                             alt="iPhone 13 Pro" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">iPhone 13 Pro</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">(256 reviews)</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">128GB Storage | 6.1" ProMotion</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSh 129,999</span>
+                            <button class="bg-accent text-white px-4 py-2 rounded-full btn-accent transition">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- iPhone 14 Pro Max -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden product-card transition duration-300">
+                    <div class="p-4">
+                        <img src="https://www.apple.com/v/iphone/home/bk/images/overview/compare/iphone_14_pro__f0j3xqz0vuqu_large.png" 
+                             alt="iPhone 14 Pro Max" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">iPhone 14 Pro Max</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">(312 reviews)</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">256GB Storage | 6.7" Dynamic Island</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSh 189,999</span>
+                            <button class="bg-accent text-white px-4 py-2 rounded-full btn-accent transition">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- iPhone 15 Pro -->
+                <div class="bg-gray-900 rounded-xl overflow-hidden product-card transition duration-300">
+                    <div class="p-4">
+                        <img src="https://www.apple.com/v/iphone/home/bk/images/overview/compare/iphone_15_pro__f5jz7mocxii2_large.png" 
+                             alt="iPhone 15 Pro" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">iPhone 15 Pro</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">(428 reviews)</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">256GB Storage | Titanium Design</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold">KSh 219,999</span>
+                            <button class="bg-accent text-white px-4 py-2 rounded-full btn-accent transition">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-accent text-accent px-8 py-3 rounded-full font-medium hover:bg-purple-900 hover:bg-opacity-20 transition">
+                    View All iPhones
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="deals" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Special Offers</h2>
+            
+            <div class="bg-gradient-to-r from-purple-900 to-black rounded-2xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">Limited Time</span>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Trade-In Offer</h3>
+                        <p class="text-lg mb-6">Get up to KSh 50,000 off when you trade in your old iPhone.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>Instant valuation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>Free data transfer</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-accent mr-2"></i>
+                                <span>1-year warranty included</span>
+                            </li>
+                        </ul>
+                        <button class="bg-accent text-white px-6 py-3 rounded-full font-medium btn-accent transition">
+                            Check Trade-In Value
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 flex items-center justify-center p-8">
+                        <img src="https://www.apple.com/v/iphone/home/bk/images/overview/retail/trade-in__d6hqfz532heu_large.jpg" 
+                             alt="Trade In Offer" 
+                             class="w-full max-w-md rounded-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="bg-gray-900 rounded-xl p-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-4 md:mb-0 flex justify-center">
+                        <i class="fas fa-truck text-5xl text-accent"></i>
+                    </div>
+                    <div class="md:w-2/3 md:pl-6">
+                        <h3 class="text-xl font-bold mb-2">Free Delivery</h3>
+                        <p class="text-gray-400">Free nationwide delivery on all orders over KSh 100,000. Next-day delivery in Nairobi.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl p-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-4 md:mb-0 flex justify-center">
+                        <i class="fas fa-shield-alt text-5xl text-accent"></i>
+                    </div>
+                    <div class="md:w-2/3 md:pl-6">
+                        <h3 class="text-xl font-bold mb-2">1-Year Warranty</h3>
+                        <p class="text-gray-400">All our iPhones come with 1-year official Apple warranty and 14-day return policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-16 bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Why Choose AdasimboIphones?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-gray-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check-circle text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Authentic Products</h3>
+                    <p class="text-gray-400">We only sell 100% genuine Apple products with official warranty.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-gray-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Expert Support</h3>
+                    <p class="text-gray-400">Our Apple-certified technicians are available to assist you 24/7.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-gray-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Physical Stores</h3>
+                    <p class="text-gray-400">Visit our stores in Nairobi, Mombasa, and Kisumu for hands-on experience.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-900 rounded-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Our Story</h3>
+                        <p class="text-gray-400 mb-4">
+                            Founded in 2015, AdasimboIphones has grown to become the leading premium reseller of Apple products in East Africa. 
+                            We're passionate about technology and committed to providing exceptional customer service.
+                        </p>
+                        <p class="text-gray-400">
+                            With three retail locations and a team of Apple-certified professionals, we're proud to bring the Apple ecosystem 
+                            to Kenyan consumers with the highest standards of quality and service.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="iStore Kenya" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Contact Us</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 bg-gray-900 rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6">Get in Touch</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-400 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-400 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-400 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                        </div>
+                        <button type="submit" class="bg-accent text-white px-6 py-3 rounded-full font-medium btn-accent transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-900 rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6">Our Locations</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gray-800 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Nairobi Flagship Store</h4>
+                                    <p class="text-gray-400">The Village Market, Limuru Road</p>
+                                    <p class="text-gray-400">Open: Mon-Sat 9AM-7PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gray-800 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Mombasa Store</h4>
+                                    <p class="text-gray-400">City Mall, Nyali</p>
+                                    <p class="text-gray-400">Open: Mon-Sat 9AM-6PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gray-800 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Kisumu Store</p>
+                                    <p class="text-gray-400">West End Mall, Oginga Odinga Street</p>
+                                    <p class="text-gray-400">Open: Mon-Sat 9AM-6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Customer Support</h4>
+                            <div class="flex items-center mb-3">
+                                <i class="fas fa-phone-alt text-accent mr-3"></i>
+                                <span>+254 700 123 456</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-accent mr-3"></i>
+                                <span>support@istorekenya.co.ke</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-accent transition">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gradient-to-r from-purple-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Get exclusive deals, new product announcements, and Apple tips straight to your inbox.</p>
+            
+            <div class="flex flex-col sm:flex-row max-w-md mx-auto sm:max-w-xl">
+                <input type="email" placeholder="Your email address" class="bg-white text-gray-900 px-4 py-3 rounded-l-lg sm:rounded-r-none rounded-r-lg sm:w-full focus:outline-none">
+                <button class="bg-accent text-white px-6 py-3 rounded-r-lg sm:rounded-l-none rounded-l-lg mt-2 sm:mt-0 sm:w-auto btn-accent transition font-medium">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fab fa-apple text-3xl text-accent"></i>
+                        <h3 class="text-2xl font-bold">Adasimbo<span class="text-accent">Iphones</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">The premier destination for Apple products in Kenya.</p>
+                    <p class="text-gray-400">© 2023 AdasimboIphones. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">iPhone</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">iPad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Mac</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Apple Watch</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Warranty</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Repair Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400 text-center">
+                    AdasimboIphones is an authorized reseller of Apple products. Apple, the Apple logo, iPhone, iPad, Mac, Apple Watch, and other Apple products are trademarks of Apple Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-2">
+                    <i class="fab fa-apple text-3xl text-accent"></i>
+                    <h1 class="text-2xl font-bold">Adasimbo<span class="text-accent">Iphones</span></h1>
+                </div>
+                <button id="close-menu" class="text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col space-y-6 text-xl">
+                <a href="#home" class="nav-link font-medium hover:text-accent transition">Home</a>
+                <a href="#products" class="nav-link font-medium hover:text-accent transition">Products</a>
+                <a href="#deals" class="nav-link font-medium hover:text-accent transition">Deals</a>
+                <a href="#about" class="nav-link font-medium hover:text-accent transition">About</a>
+                <a href="#contact" class="nav-link font-medium hover:text-accent transition">Contact</a>
+            </nav>
+            
+            <div class="mt-12">
+                <h3 class="text-lg font-bold mb-4">Contact</h3>
+                <div class="flex items-center mb-3">
+                    <i class="fas fa-phone-alt text-accent mr-3"></i>
+                    <span>+254 700 123 456</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-accent mr-3"></i>
+                    <span>support@istorekenya.co.ke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('header button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+        });
+        
+        document.getElementById('close-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple cart functionality
+        let cartCount = 0;
+        const cartButtons = document.querySelectorAll('.product-card button');
+        const cartBadge = document.querySelector('.cart-badge');
+        
+        cartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                cartCount++;
+                cartBadge.textContent = cartCount;
+                
+                // Animation effect
+                cartBadge.parentElement.classList.add('animate-bounce');
+                setTimeout(() => {
+                    cartBadge.parentElement.classList.remove('animate-bounce');
+                }, 1000);
+                
+                // Change button text temporarily
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Added';
+                button.classList.add('bg-green-500');
+                button.classList.remove('bg-accent');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-500');
+                    button.classList.add('bg-accent');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
